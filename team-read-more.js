@@ -7,13 +7,13 @@
                 -webkit-line-clamp: 18; /* Number of lines to show in collapsed state */
                 -webkit-box-orient: vertical;
                 overflow: hidden;
-                transition: max-height 0.3s ease; /* Smooth transition for max-height */
+                //transition: max-height 0.3s ease; /* Smooth transition for max-height */
                 max-height: 0; /* Initially collapsed */
             }
 
             .p-team_expand.expanded {
                 -webkit-line-clamp: unset; /* Remove truncation for expanded state */
-                max-height: 10000px; /* Temporarily set to a large value for smooth expansion */
+                //max-height: 10000px; /* Temporarily set to a large value for smooth expansion */
             }
         `;
         document.head.appendChild(style);
@@ -40,7 +40,7 @@
                 // Set max-height to auto for expanded content
                 setTimeout(() => {
                     container.style.maxHeight = 'none'; // Set max-height to 'none' to let content expand freely
-                }); // Add a delay for smooth transition
+                }); // Add a delay for smooth transition (there was a ', 300' between } and );)
             });
 
             // Collapse functionality with scroll to top
